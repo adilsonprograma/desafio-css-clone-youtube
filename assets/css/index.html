@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>YouTube Clone (CSS Only)</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header>
+        <div class="start">
+            <i class="material-icons">menu</i>
+            <div class="logo">
+                <i class="material-icons">play_circle_filled</i> YouTube
+            </div>
+        </div>
+        <div class="center">
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar">
+                <button><i class="material-icons">search</i></button>
+            </div>
+        </div>
+        <div class="end">
+            <i class="material-icons">video_call</i>
+            <i class="material-icons">notifications</i>
+            <div class="avatar"  style="  width: 32px; height: 32px;"><img class="imagem" src="/IMG_20190204_080856607.jpg" alt=""></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside>
+            <div class="menu-item active"><i class="material-icons">home</i><span>Início</span></div>
+            <div class="menu-item"><i class="material-icons">explore</i><span>Shorts</span></div>
+            <div class="menu-item"><i class="material-icons">subscriptions</i><span>Inscrições</span></div>
+            <hr style="border-color: #303030; margin: 12px 0;">
+            <div class="menu-item"><i class="material-icons">video_library</i><span>Biblioteca</span></div>
+            <div class="menu-item"><i class="material-icons">history</i><span>Histórico</span></div>
+        </aside>
+
+        <main>
+            <div class="chips-container">
+                <div class="chip active">Tudo</div>
+                <div class="chip">Jogos</div>
+                <div class="chip">Música</div>
+                <div class="chip">Ao Vivo</div>
+                <div class="chip">Inss</div>
+                <div class="chip">Engenharia</div>
+                <div class="chip">Python</div>
+                <div class="chip">CSS</div>
+                <div class="chip">Computadores</div>
+            </div>
+
+            <div class="video-grid">
+                
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/tEqVyJNOroI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBkXj8HaH0o2LdC446io5p9BTyNCA" alt="Thumb">
+                        <span class="time-status">14:20</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-image: url('https://source.unsplash.com/random/50x50?face'); background-size: cover;"></div>
+                        <div class="meta">
+                            <h3>Curso Completo de Engenharia de Software</h3>
+                            <p>Dev Academy</p>
+                            <p>500 mil visualizações • há 2 dias</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/tR0Hr9JHnnw/oardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBeYm5yNe2XzKouRMnLkYgK8M6Srg" alt="Thumb">
+                        <span class="time-status">LIVE</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-color: aqua;"></div>
+                        <div class="meta">
+                            <h3>Conheça o novo kuait - Ao Vivo</h3>
+                            <p>Carros TV</p>
+                            <p>15 mil assistindo</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/4Ym-1uEODaE/hq720.jpg?sqp=-oaymwFBCOgCEMoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLBsgotrYdjf1k5zHVaI-Ljk9ejuDw" alt="Thumb">
+                        <span class="time-status">08:45</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-color: orange;"></div>
+                        <div class="meta">
+                            <h3>Inss em foco</h3>
+                            <p>Tudo sobre inss</p>
+                            <p>2 mi de visualizações • há 1 ano</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://yt3.ggpht.com/proxy/K-czmChKaXm8n3Tgojq_8Lv0J10uz_cxoKL8lncfP_Ji4wBmLOO1NMQbIwuj5eiIzEbkLdCMhDfESMWu_zYTWagpOQM-vCDfB4-L3sFHItr2i0HlzG9AhVRHVHE2Z6lWH1PC=w1152-h603-nd" alt="Thumb">
+                        <span class="time-status">12:10</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-color: blue;"></div>
+                        <div class="meta">
+                            <h3>Curso python </h3>
+                            <p>Python em foco</p>
+                            <p>300 mil visualizações • há 5 horas</p>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/Pl1C7oVF8t4/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBSWx1zOVTCCYgvf3awL6kDnq5vBw" alt="Thumb">
+                        <span class="time-status">45:00</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-color: purple;"></div>
+                        <div class="meta">
+                            <h3>Aprenda HTML e CSS do Zero com IA</h3>
+                            <p>Felipe Dev</p>
+                            <p>1.2 mi visualizações • há 3 meses</p>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="video-card">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/Mim6nnkdOto/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDROVyLcd-N3C57dbNlQFDM0iMqNg" alt="Thumb">
+                        <span class="time-status">22:15</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar" style="background-color: red;"></div>
+                        <div class="meta">
+                            <h3>POO para todos</h3>
+                            <p>Prof Guanabara</p>
+                            <p>89 mil visualizações • há 1 semana</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

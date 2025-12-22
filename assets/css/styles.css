@@ -1,0 +1,218 @@
+
+        /* --- CSS: VARIÁVEIS E RESET --- */
+        :root {
+            --bg-color: #0f0f0f;
+            --header-bg: #0f0f0f;
+            --text-primary: #ffffff;
+            --text-secondary: #aaaaaa;
+            --hover-color: #272727;
+            --search-bg: #121212;
+            --border-color: #303030;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- HEADER --- */
+        header {
+            height: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            background-color: var(--header-bg);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .imagem { border-radius: 60%;}
+
+        .start, .end{ display: flex; align-items: center; gap: 15px; border-radius: 50%; }
+        
+        .logo { display: flex; align-items: center; gap: 5px; font-weight: bold; font-size: 1.1rem; letter-spacing: -1px; }
+        .logo i { color: #ff0000; font-size: 28px; }
+
+        .center { display: flex; flex: 0 1 600px; margin: 0 20px; }
+        
+        .search-box {
+            display: flex;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            background-color: var(--search-bg);
+            border: 1px solid var(--border-color);
+            color: white;
+            padding: 0 15px;
+            border-radius: 40px 0 0 40px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* Efeito de foco no input usando CSS puro */
+        .search-box input:focus { border-color: #1c62b9; margin-left: -1px;}
+
+        .search-box button {
+            width: 64px;
+            background-color: var(--hover-color);
+            border: 1px solid var(--border-color);
+            border-left: none;
+            border-radius: 0 40px 40px 0;
+            cursor: pointer;
+        }
+        .search-box button i { color: white; }
+
+        /* --- LAYOUT PRINCIPAL --- */
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden; /* Importante para scroll independente */
+        }
+
+        /* --- SIDEBAR --- */
+        aside {
+            width: 240px;
+            background-color: var(--bg-color);
+            overflow-y: auto;
+            padding: 12px;
+            flex-shrink: 0; /* Impede que a sidebar encolha */
+        }
+
+        /* Responsividade: Esconde sidebar em telas pequenas */
+        @media (max-width: 792px) {
+            aside { display: none; }
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .menu-item:hover { background-color: var(--hover-color); }
+        .menu-item.active { background-color: var(--hover-color); font-weight: bold; }
+        .menu-item i { margin-right: 24px; font-size: 24px; }
+        .menu-item span { font-size: 14px; }
+
+        /* --- CONTEÚDO PRINCIPAL --- */
+        main {
+            flex: 1;
+            overflow-y: auto; /* Scroll apenas aqui */
+            padding: 24px;
+        }
+
+        /* --- CHIPS (TAGS) --- */
+        .chips-container {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto; /* Scroll horizontal */
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            scrollbar-width: none; /* Esconde barra de scroll no Firefox */
+        }
+        .chips-container::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+        .chip {
+            background-color: var(--hover-color);
+            padding: 6px 12px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .chip:hover { background-color: #3f3f3f; }
+        .chip.active { background-color: white; color: black; }
+
+        /* --- GRID DE VÍDEOS --- */
+        .video-grid {
+            display: grid;
+            /* O segredo da responsividade sem JS: */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            column-gap: 16px;
+            row-gap: 40px;
+        }
+
+        .video-card { cursor: pointer; }
+        
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/9; /* Mantém a proporção de vídeo */
+            transition: border-radius 0.2s;
+        }
+        
+        .thumbnail:hover { border-radius: 0; } /* Efeito sutil ao passar o mouse */
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .time-status {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 3px 4px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .video-info {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #555;
+            flex-shrink: 0;
+        }
+
+        .meta h3 {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 4px;
+            display: -webkit-box;
+           /* -webkit-line-clamp: 2;*/ /* Corta texto após 2 linhas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 18px;
+        }
+        
+        .meta p:hover { color: white; }
+
+    
