@@ -1,0 +1,35 @@
+# YouTube Clone (Interface)
+
+Este projeto é uma réplica visual da interface do YouTube ("Front-end Clone"), desenvolvida com foco no estudo de estruturação de layout e estilização moderna.
+
+O objetivo principal foi recriar a fidelidade visual e a responsividade da plataforma original utilizando **apenas HTML5 e CSS3**, sem o uso de frameworks ou bibliotecas pesadas.
+
+## 📸 Demonstração
+
+*(Sugestão: Insira aqui um print da tela do seu projeto rodando)*
+
+## 🛠️ Tecnologias Utilizadas
+
+* **HTML5:** Estruturação semântica do conteúdo.
+* **CSS3:** Estilização avançada.
+* **Google Material Icons:** Biblioteca de ícones utilizada para menus e botões.
+
+## 🚀 Conceitos Aplicados
+
+Como parte dos estudos em Engenharia de Software e Desenvolvimento Web, este projeto aplica os seguintes conceitos:
+
+* **CSS Grid Layout:** Utilizado na galeria de vídeos (`.video-grid`) para criar um layout fluido e responsivo que se adapta a diferentes tamanhos de tela automaticamente (`minmax` e `auto-fill`).
+* **CSS Flexbox:** Utilizado amplamente para alinhamentos no cabeçalho, sidebar e centralização de elementos internos.
+* **CSS Variables (Custom Properties):** Uso de variáveis no `:root` para gerenciamento de cores e tema (Dark Mode), facilitando a manutenção.
+* **Responsividade:** Uso de *Media Queries* para ocultar a barra lateral (`aside`) em dispositivos móveis ou telas menores que 792px.
+* **Reset CSS:** Padronização inicial das margens e preenchimentos para garantir consistência entre navegadores.
+
+## 📂 Estrutura de Arquivos
+
+```text
+/
+├── index.html          # Estrutura principal
+├── assets/
+│   └── css/
+│       └── styles.css  # Folha de estilos
+└── IMG_*.jpg           # Imagens locais (se houver)
